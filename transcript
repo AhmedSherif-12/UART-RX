@@ -1,0 +1,66 @@
+# vsim work.UART_RX_TOP 
+# Start time: 11:10:06 on Jul 29,2022
+# Loading work.UART_RX_TOP
+# Loading work.strt_check
+# Loading work.stp_check
+# Loading work.parity_check
+# Loading work.edge_bit_counter
+# Loading work.FSM
+add wave -position insertpoint  \
+sim:/UART_RX_TOP/clk \
+sim:/UART_RX_TOP/rst \
+sim:/UART_RX_TOP/RX_IN \
+sim:/UART_RX_TOP/PAR_EN \
+sim:/UART_RX_TOP/PAR_TYP \
+sim:/UART_RX_TOP/prescale \
+sim:/UART_RX_TOP/data_valid \
+sim:/UART_RX_TOP/P_data \
+sim:/UART_RX_TOP/sampled_bit \
+sim:/UART_RX_TOP/strt_glitch \
+sim:/UART_RX_TOP/par_err \
+sim:/UART_RX_TOP/stp_glitch \
+sim:/UART_RX_TOP/strt_check_en \
+sim:/UART_RX_TOP/stp_check_en \
+sim:/UART_RX_TOP/par_chk_en \
+sim:/UART_RX_TOP/cnt_en \
+sim:/UART_RX_TOP/deser_en \
+sim:/UART_RX_TOP/bit_cnt \
+sim:/UART_RX_TOP/edge_cnt \
+sim:/UART_RX_TOP/data_samp_en \
+sim:/UART_RX_TOP/stp_err \
+sim:/UART_RX_TOP/strt_chk_en \
+sim:/UART_RX_TOP/stp_chk_en
+force -freeze sim:/UART_RX_TOP/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/UART_RX_TOP/rst 1 0
+force -freeze sim:/UART_RX_TOP/rst 0 20
+force -freeze sim:/UART_RX_TOP/rst 1 40
+force -freeze sim:/UART_RX_TOP/RX_IN 1 0
+force -freeze sim:/UART_RX_TOP/PAR_EN 1 0
+force -freeze sim:/UART_RX_TOP/PAR_TYP 0 0
+force -freeze sim:/UART_RX_TOP/prescale 01000 0
+run
+run
+force -freeze sim:/UART_RX_TOP/RX_IN 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/UART_RX_TOP/RX_IN 1 0
+run
+run
+run
+run
+run
+run
+# End time: 15:47:30 on Jul 29,2022, Elapsed time: 4:37:24
+# Errors: 0, Warnings: 0
